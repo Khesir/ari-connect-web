@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import { Providers } from "../provider/chakraProvider";
 import { fonts } from "../utils/fonts";
 import Navbar from "@/components/home/sections/navbar";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ari Connect",
@@ -30,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={fonts.rubik.variable}>
+    <html lang="en" className={fonts.inter.variable}>
       <body>
         <Providers>
           <Navbar/>
