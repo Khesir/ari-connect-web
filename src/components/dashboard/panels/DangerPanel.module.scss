@@ -1,0 +1,62 @@
+@use "tokens" as t;
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(255, 95, 87, 0.25);
+  border-radius: t.$radius-xl;
+  background: rgba(255, 95, 87, 0.04);
+  padding: 22px 26px;
+  flex-wrap: wrap;
+}
+
+.info {
+  flex: 1;
+  min-width: 240px;
+}
+
+.title {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 16px;
+  color: t.$color-ink;
+}
+
+.body {
+  font-size: 13.5px;
+  color: t.$color-ink-2;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.transfer {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 14px;
+  color: t.$color-red-text;
+  background: transparent;
+  border: 1px solid rgba(255, 95, 87, 0.4);
+  border-radius: t.$radius-md;
+  padding: 11px 18px;
+  cursor: pointer;
+}
+
+.delete {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background: t.$color-red-strong;
+  border: none;
+  border-radius: t.$radius-md;
+  padding: 11px 18px;
+  cursor: pointer;
+}

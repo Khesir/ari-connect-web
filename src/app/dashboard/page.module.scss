@@ -1,0 +1,6 @@
+@use "tokens" as t;
+
+.page {
+  min-height: 100vh;
+  background: radial-gradient(120% 80% at 85% -10%, #181320 0%, #0d0c11 50%);
+}

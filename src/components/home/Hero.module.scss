@@ -1,0 +1,118 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.hero {
+  position: relative;
+  max-width: t.$content-max;
+  margin: 0 auto;
+  padding: 96px 44px 84px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 48px;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 56px 24px 48px;
+  }
+}
+
+.eyebrow {
+  @include m.mono-label;
+  margin-bottom: 30px;
+}
+
+.headline {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 82px;
+  line-height: 0.94;
+  letter-spacing: -1.5px;
+  margin: 0 0 26px;
+
+  @media (max-width: 900px) {
+    font-size: 56px;
+  }
+}
+
+.italic {
+  font-style: italic;
+  @include m.gradient-text;
+}
+
+.lede {
+  font-size: 19px;
+  line-height: 1.62;
+  color: t.$color-ink-2;
+  margin: 0 0 34px;
+  max-width: 500px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.stats {
+  display: flex;
+  gap: 0;
+  margin-top: 52px;
+  border-top: 1px solid t.$border;
+  padding-top: 26px;
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.stat {
+  flex: 1;
+}
+
+.statValue {
+  font-family: t.$font-serif;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.accent {
+  color: t.$color-pink-strong;
+}
+
+.statLabel {
+  font-family: t.$font-mono;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: t.$color-ink-4;
+  margin-top: 8px;
+}
+
+.art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.55), rgba(244, 114, 182, 0.2) 55%, transparent 72%);
+  filter: blur(32px);
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.mascot {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  object-fit: contain;
+  animation: floaty 7s ease-in-out infinite;
+  filter: drop-shadow(0 24px 50px rgba(0, 0, 0, 0.6));
+}

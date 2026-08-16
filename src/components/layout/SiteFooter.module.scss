@@ -1,0 +1,41 @@
+@use "tokens" as t;
+
+.footer {
+  border-top: 1px solid t.$border-subtle;
+  padding: 34px 44px;
+  max-width: t.$content-max;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.tag {
+  font-family: t.$font-mono;
+  font-size: 12.5px;
+  color: t.$color-ink-4;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  font-family: t.$font-mono;
+  font-size: 12.5px;
+  color: t.$color-ink-3;
+  text-decoration: none;
+
+  &:hover {
+    color: t.$color-ink;
+  }
+}

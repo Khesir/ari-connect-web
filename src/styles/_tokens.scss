@@ -1,0 +1,57 @@
+// Design tokens ported from the "Ari Connect" design language (Design Language.dc.html).
+
+// ---- surfaces & ink ----
+$color-bg: #0d0c11;
+$color-panel: #15141c;
+$color-panel-2: #1b1a24;
+$color-raised: #211f2b;
+$color-terminal-bar: #100f16;
+
+$color-ink: #f3efe7;
+$color-ink-soft: #d7d2dd;
+$color-ink-2: #b4afbe;
+$color-ink-3: #9b96a6;
+$color-ink-4: #7c7889;
+$color-ink-5: #565263;
+
+// ---- brand ----
+$color-pink: #f472b6;
+$color-pink-strong: #ec71b6;
+$color-pink-pale: #f0a8d4;
+$color-purple: #a855f7;
+$color-purple-pale: #cda6ff;
+
+$gradient-brand: linear-gradient(135deg, #{$color-pink}, #{$color-purple});
+$gradient-brand-text: linear-gradient(120deg, #{$color-pink}, #{$color-purple});
+
+// ---- status ----
+$color-green: #3ec878;
+$color-green-text: #7ee0a6;
+$color-red: #ff5f57;
+$color-red-strong: #d63b35;
+$color-red-text: #ff9089;
+$color-yellow: #febc2e;
+$color-blue-text: #8fb4ff;
+$color-discord: #5865f2;
+$color-discord-hover: #4a56e0;
+
+// ---- borders ----
+$border-subtle: rgba(255, 255, 255, 0.08);
+$border: rgba(255, 255, 255, 0.1);
+$border-strong: rgba(255, 255, 255, 0.13);
+
+// ---- radii ----
+$radius-sm: 8px;
+$radius-md: 11px;
+$radius-lg: 14px;
+$radius-xl: 18px;
+$radius-2xl: 20px;
+$radius-3xl: 24px;
+
+// ---- type ----
+$font-serif: var(--font-serif), Georgia, serif;
+$font-sans: var(--font-sans), system-ui, sans-serif;
+$font-mono: var(--font-mono), monospace;
+
+// ---- layout ----
+$content-max: 1200px;

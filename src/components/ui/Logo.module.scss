@@ -1,0 +1,28 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.wordmark {
+  font-family: t.$font-mono;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: t.$color-ink;
+}
+
+.gradient {
+  @include m.gradient-text(t.$gradient-brand);
+}

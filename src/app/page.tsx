@@ -1,24 +1,23 @@
-import FeaturePage from "@/components/home/sections/feature";
-import Footer from "@/components/home/sections/footer";
-import HeroPage from "@/components/home/sections/heropage";
-import OfferPage from "@/components/home/sections/offer";
-import SetupPage from "@/components/home/sections/setup";
-import AboutPage from "@/components/home/sections/about";
-import ContactPage from "@/components/home/sections/contact";
+import { SiteNav } from "@/components/layout/SiteNav";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { Hero } from "@/components/home/Hero";
+import { Features } from "@/components/home/Features";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { Support } from "@/components/home/Support";
+import { FinalCta } from "@/components/home/FinalCta";
 
 export default function Home() {
-
   return (
-      <main className="bg-white overflow-hidden">
-        <HeroPage/>
-        <div className="bg-[#1A202C]">
-          <AboutPage/>
-          <FeaturePage/>
-          <OfferPage/>
-          <SetupPage/>
-          <ContactPage/>
-          <Footer/>
-        </div>
+    <>
+      <SiteNav />
+      <main>
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <Support />
+        <FinalCta />
       </main>
+      <SiteFooter />
+    </>
   );
 }

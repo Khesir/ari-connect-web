@@ -1,0 +1,9 @@
+@use "tokens" as t;
+
+.loading {
+  font-family: t.$font-mono;
+  font-size: 13px;
+  color: t.$color-ink-4;
+  padding: 40px 0;
+  text-align: center;
+}

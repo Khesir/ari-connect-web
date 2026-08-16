@@ -1,0 +1,59 @@
+@use "tokens" as t;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.primary {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  background: t.$gradient-brand;
+  border-radius: t.$radius-md;
+  padding: 13px 24px;
+  box-shadow: 0 12px 30px -12px rgba(168, 85, 247, 0.8);
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.secondary {
+  font-family: t.$font-mono;
+  font-weight: 500;
+  font-size: 14px;
+  color: t.$color-ink-soft;
+  background: t.$color-panel-2;
+  border: 1px solid t.$border-strong;
+  border-radius: t.$radius-md;
+  padding: 13px 22px;
+
+  &:hover {
+    background: t.$color-raised;
+  }
+}
+
+.discord {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 15.5px;
+  color: #fff;
+  background: t.$color-discord;
+  border-radius: 13px;
+  padding: 15px 20px;
+  box-shadow: 0 12px 30px -12px rgba(88, 101, 242, 0.9);
+  width: 100%;
+
+  &:hover {
+    background: t.$color-discord-hover;
+  }
+}

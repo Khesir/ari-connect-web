@@ -1,0 +1,48 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.section {
+  max-width: t.$content-max;
+  margin: 0 auto;
+  padding: 80px 44px 90px;
+
+  @media (max-width: 720px) {
+    padding: 56px 20px 56px;
+  }
+}
+
+.inner {
+  border-top: 1px solid t.$border;
+  padding-top: 64px;
+  text-align: center;
+}
+
+.heading {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  margin: 0 0 16px;
+
+  @media (max-width: 720px) {
+    font-size: 40px;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.lede {
+  font-size: 17px;
+  color: t.$color-ink-3;
+  margin: 0 0 32px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  flex-wrap: wrap;
+}

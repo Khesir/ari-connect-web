@@ -1,0 +1,16 @@
+@use "tokens" as t;
+
+.page {
+  min-height: 100vh;
+  background: radial-gradient(130% 90% at 50% -10%, #1a1422 0%, #0d0c11 55%);
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px 80px;
+}

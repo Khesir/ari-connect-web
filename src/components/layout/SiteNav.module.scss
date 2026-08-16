@@ -1,0 +1,72 @@
+@use "tokens" as t;
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 44px;
+  border-bottom: 1px solid t.$border-subtle;
+  background: rgba(13, 12, 17, 0.72);
+  backdrop-filter: blur(14px);
+
+  @media (max-width: 720px) {
+    padding: 14px 20px;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+
+  @media (max-width: 720px) {
+    gap: 16px;
+  }
+}
+
+.link {
+  position: relative;
+  font-family: t.$font-sans;
+  font-weight: 500;
+  font-size: 14.5px;
+  color: t.$color-ink-4;
+  text-decoration: none;
+  padding-bottom: 5px;
+
+  &:hover {
+    color: t.$color-ink-2;
+  }
+
+  @media (max-width: 560px) {
+    display: none;
+  }
+}
+
+.active {
+  font-weight: 600;
+  color: t.$color-ink;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 26px;
+    height: 2px;
+    border-radius: 2px;
+    background: t.$gradient-brand;
+  }
+
+  &:hover {
+    color: t.$color-ink;
+  }
+}
+
+.signIn {
+  padding: 9px 17px !important;
+  font-size: 13.5px !important;
+}

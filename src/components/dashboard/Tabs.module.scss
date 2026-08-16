@@ -1,0 +1,51 @@
+@use "tokens" as t;
+
+.tabs {
+  position: sticky;
+  top: 61px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 28px;
+  border-bottom: 1px solid t.$border-subtle;
+  background: rgba(13, 12, 17, 0.78);
+  backdrop-filter: blur(14px);
+  overflow-x: auto;
+
+  @media (max-width: 720px) {
+    padding: 0 16px;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: t.$font-mono;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 15px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: t.$color-ink-3;
+}
+
+.active {
+  color: t.$color-ink;
+  border-bottom-color: t.$color-pink-strong;
+}
+
+.activeDanger {
+  border-bottom-color: t.$color-red;
+}
+
+.locked {
+  color: t.$color-ink-5;
+
+  span:first-child {
+    opacity: 0.5;
+  }
+}

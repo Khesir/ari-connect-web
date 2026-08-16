@@ -1,0 +1,154 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+.glowWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -38px;
+  z-index: 2;
+}
+
+.glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.6), rgba(244, 114, 182, 0.2) 55%, transparent 72%);
+  filter: blur(22px);
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.mascot {
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px #{t.$color-bg}, 0 0 0 5px rgba(255, 255, 255, 0.12);
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.card {
+  border: 1px solid t.$border;
+  border-radius: t.$radius-3xl;
+  background: t.$color-panel;
+  padding: 56px 40px 34px;
+  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.95);
+
+  @media (max-width: 480px) {
+    padding: 48px 24px 28px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  @include m.mono-label;
+  font-size: 11.5px;
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.02;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.lede {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: t.$color-ink-3;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.discordBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  text-decoration: none;
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 15.5px;
+  color: #fff;
+  background: t.$color-discord;
+  border: none;
+  border-radius: 13px;
+  padding: 15px 20px;
+  box-shadow: 0 12px 30px -12px rgba(88, 101, 242, 0.9);
+  cursor: pointer;
+
+  &:hover {
+    background: t.$color-discord-hover;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.dividerLabel {
+  font-family: t.$font-mono;
+  font-size: 11px;
+  color: t.$color-ink-5;
+  white-space: nowrap;
+}
+
+.trust {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  color: t.$color-ink-2;
+}
+
+.check {
+  color: t.$color-green-text;
+}
+
+.terms {
+  text-align: center;
+  font-family: t.$font-mono;
+  font-size: 11px;
+  color: t.$color-ink-5;
+  margin: 22px auto 0;
+  max-width: 340px;
+  line-height: 1.7;
+}
+
+.termsLink {
+  color: t.$color-ink-3;
+  text-decoration: underline;
+}

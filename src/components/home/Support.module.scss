@@ -1,0 +1,138 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.section {
+  max-width: t.$content-max;
+  margin: 0 auto;
+  padding: 72px 44px 40px;
+
+  @media (max-width: 720px) {
+    padding: 48px 20px 24px;
+  }
+}
+
+.head {
+  @include m.section-head;
+}
+
+.kicker {
+  @include m.mono-label;
+}
+
+.divider {
+  @include m.hairline-divider;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 0.86fr;
+  gap: 56px;
+  align-items: center;
+  padding-top: 20px;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heading {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: -0.6px;
+  margin: 0 0 22px;
+
+  @media (max-width: 720px) {
+    font-size: 38px;
+  }
+}
+
+.italic {
+  font-style: italic;
+  @include m.gradient-text;
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 1.62;
+  color: t.$color-ink-2;
+  margin: 0 0 18px;
+  max-width: 480px;
+}
+
+.note {
+  font-family: t.$font-mono;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: t.$color-ink-4;
+  margin: 0;
+  max-width: 480px;
+}
+
+.pink {
+  color: t.$color-pink-pale;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  border: 1px solid t.$border-strong;
+  border-radius: t.$radius-lg;
+  background: t.$color-panel;
+  padding: 20px 22px;
+
+  &:hover {
+    border-color: rgba(244, 114, 182, 0.4);
+  }
+}
+
+.cardIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.cardBody {
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 16px;
+  color: t.$color-ink;
+}
+
+.cardSubtitle {
+  font-family: t.$font-mono;
+  font-size: 12px;
+  color: t.$color-ink-4;
+  margin-top: 3px;
+}
+
+.arrow {
+  color: t.$color-ink-4;
+  font-size: 18px;
+}
+
+.footnote {
+  font-family: t.$font-mono;
+  font-size: 11.5px;
+  color: t.$color-ink-5;
+  text-align: center;
+  margin-top: 4px;
+}

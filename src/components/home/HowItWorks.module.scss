@@ -1,0 +1,175 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.section {
+  max-width: t.$content-max;
+  margin: 0 auto;
+  padding: 72px 44px 40px;
+
+  @media (max-width: 720px) {
+    padding: 48px 20px 24px;
+  }
+}
+
+.head {
+  @include m.section-head;
+}
+
+.kicker {
+  @include m.mono-label;
+}
+
+.divider {
+  @include m.hairline-divider;
+}
+
+.heading {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.02;
+  letter-spacing: -0.6px;
+  margin: 0 0 52px;
+  max-width: 620px;
+
+  @media (max-width: 720px) {
+    font-size: 36px;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 44px;
+  align-items: start;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-top: 1px solid t.$border;
+}
+
+.stepN {
+  font-family: t.$font-serif;
+  font-size: 34px;
+  line-height: 0.9;
+  @include m.gradient-text;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.stepTitle {
+  font-family: t.$font-sans;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.stepBody {
+  font-size: 14px;
+  color: t.$color-ink-3;
+  margin-top: 5px;
+  line-height: 1.55;
+}
+
+.terminal {
+  border: 1px solid t.$border;
+  border-radius: t.$radius-2xl;
+  background: t.$color-panel;
+  overflow: hidden;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.9);
+}
+
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 18px;
+  background: t.$color-terminal-bar;
+  border-bottom: 1px solid t.$border-subtle;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.dotRed {
+  background: t.$color-red;
+}
+
+.dotYellow {
+  background: t.$color-yellow;
+}
+
+.dotGreen {
+  background: #28c840;
+}
+
+.terminalTitle {
+  font-family: t.$font-mono;
+  font-size: 12px;
+  color: t.$color-ink-4;
+  margin-left: 10px;
+}
+
+.terminalBody {
+  padding: 24px 26px;
+  font-family: t.$font-mono;
+  font-size: 13px;
+  line-height: 2.05;
+  color: t.$color-ink-3;
+}
+
+.line {
+  color: t.$color-ink-3;
+}
+
+.gapTop {
+  margin-top: 6px;
+}
+
+.green {
+  color: t.$color-green-text;
+}
+
+.pink {
+  color: t.$color-pink-pale;
+}
+
+.purple {
+  color: t.$color-purple-pale;
+}
+
+.blue {
+  color: t.$color-blue-text;
+}
+
+.dim {
+  color: t.$color-ink-4;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: t.$color-ink;
+  vertical-align: -2px;
+  animation: blink 1s steps(1) infinite;
+}

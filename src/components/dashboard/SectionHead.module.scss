@@ -1,0 +1,40 @@
+@use "tokens" as t;
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.dollar {
+  font-family: t.$font-mono;
+  color: t.$color-pink-strong;
+  font-size: 13px;
+}
+
+.bangDanger {
+  font-family: t.$font-mono;
+  color: t.$color-red;
+  font-size: 13px;
+}
+
+.title {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.titleDanger {
+  @extend .title;
+  color: t.$color-red-text;
+}
+
+.comment {
+  font-family: t.$font-mono;
+  font-size: 12px;
+  color: t.$color-ink-5;
+}

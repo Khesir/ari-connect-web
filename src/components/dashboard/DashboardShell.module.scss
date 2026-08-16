@@ -1,0 +1,11 @@
+@use "tokens" as t;
+
+.content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 34px 28px 110px;
+
+  @media (max-width: 560px) {
+    padding: 24px 16px 80px;
+  }
+}

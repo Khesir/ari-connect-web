@@ -1,0 +1,107 @@
+@use "tokens" as t;
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 24px 26px;
+  border: 1px solid t.$border-subtle;
+  border-radius: t.$radius-2xl;
+  background: linear-gradient(135deg, #16151d, #131119);
+  margin-bottom: 30px;
+
+  @media (max-width: 720px) {
+    flex-wrap: wrap;
+  }
+}
+
+.icon {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: t.$gradient-brand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: t.$font-mono;
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: t.$font-serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.public {
+  font-family: t.$font-mono;
+  font-size: 11.5px;
+  color: t.$color-pink-pale;
+  background: rgba(244, 114, 182, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.3);
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+
+.description {
+  font-size: 14.5px;
+  color: t.$color-ink-2;
+  margin: 9px 0 0;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.stat {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.statLabel {
+  font-family: t.$font-mono;
+  font-size: 12px;
+  color: t.$color-ink-4;
+}
+
+.statValue {
+  font-family: t.$font-mono;
+  font-size: 24px;
+  color: t.$color-ink;
+  margin-top: 4px;
+}
+
+.statLimit {
+  color: t.$color-ink-5;
+}
+
+.bar {
+  width: 160px;
+  height: 6px;
+  border-radius: 999px;
+  background: t.$color-raised;
+  margin-top: 9px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: t.$gradient-brand;
+}

@@ -1,0 +1,22 @@
+@use "tokens" as t;
+
+%pill {
+  font-family: t.$font-mono;
+  font-size: 11px;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.public {
+  @extend %pill;
+  color: t.$color-pink-pale;
+  background: rgba(244, 114, 182, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.3);
+}
+
+.private {
+  @extend %pill;
+  color: t.$color-ink-3;
+  background: t.$color-raised;
+  border: 1px solid t.$border-strong;
+}

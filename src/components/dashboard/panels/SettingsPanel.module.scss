@@ -1,0 +1,134 @@
+@use "tokens" as t;
+@use "mixins" as m;
+
+.card {
+  border: 1px solid t.$border-subtle;
+  border-radius: t.$radius-2xl;
+  background: t.$color-panel;
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 560px) {
+    padding: 24px 20px;
+  }
+}
+
+.label {
+  display: block;
+  font-family: t.$font-mono;
+  font-size: 12px;
+  color: t.$color-ink-4;
+  margin-bottom: 9px;
+}
+
+.field {
+  @include m.input-field;
+}
+
+.fieldValue {
+  font-family: t.$font-sans;
+  font-size: 15px;
+  color: t.$color-ink;
+}
+
+.textarea {
+  background: t.$color-bg;
+  border: 1px solid t.$border-strong;
+  border-radius: t.$radius-md;
+  padding: 12px 15px;
+  min-height: 78px;
+  font-size: 14.5px;
+  color: t.$color-ink-soft;
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.rowItem {
+  flex: 1;
+  min-width: 240px;
+}
+
+.rowItemNarrow {
+  min-width: 200px;
+}
+
+.limitRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: t.$color-raised;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: t.$gradient-brand;
+}
+
+.limitValue {
+  font-family: t.$font-mono;
+  font-size: 15px;
+  color: t.$color-ink;
+}
+
+.visibilityRow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.visibilityLabel {
+  font-family: t.$font-sans;
+  font-size: 14px;
+  color: t.$color-ink-soft;
+}
+
+.toggleOn {
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: t.$gradient-brand;
+  position: relative;
+  display: inline-block;
+}
+
+.toggleKnob {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid t.$border-subtle;
+}
+
+.cancel {
+  @include m.ghost-btn-sm;
+}
+
+.save {
+  @include m.primary-btn-sm;
+  padding: 10px 20px;
+  box-shadow: 0 8px 24px -10px rgba(168, 85, 247, 0.7);
+}
